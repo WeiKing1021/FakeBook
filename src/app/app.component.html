@@ -1,4 +1,21 @@
-<!-- NG-ZORRO -->
-<a href="https://github.com/NG-ZORRO/ng-zorro-antd" target="_blank" style="display: flex;align-items: center;justify-content: center;height: 100%;width: 100%;">
-  <img height="300" src="https://img.alicdn.com/tfs/TB1X.qJJgHqK1RjSZFgXXa7JXXa-89-131.svg">
-</a>
+<div nz-row class="w100 h100"
+     hammerListener
+     [hammerOption]="this.hammerOption"
+     hammerAction="pan"
+     (onHammer)="this.pan($event)">
+  <div nz-col class="sidebar-left" [nzXs]="0" [nzSm]="5" [nzMd]="4">
+    <app-shop></app-shop>
+  </div>
+  <div nz-col [nzXs]="24" [nzSm]="14" [nzMd]="16">
+    <app-post-content></app-post-content>
+  </div>
+  <div nz-col class="sidebar-right" [nzXs]="0" [nzSm]="5" [nzMd]="4">
+    <app-chat-room></app-chat-room>
+  </div>
+  <div #rwdSideBarLeft class="sidebar-left rwd-sidebar-left" nz-col [nzXs]="24" [nzSm]="0">
+    <app-shop></app-shop>
+  </div>
+  <div #rwdSideBarRight class="sidebar-right rwd-sidebar-right" nz-col [nzXs]="24" [nzSm]="0">
+    <app-chat-room></app-chat-room>
+  </div>
+</div>
