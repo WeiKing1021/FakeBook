@@ -7,7 +7,7 @@
     "build": "ng build --prod --build-optimizer --stats-json",
     "test": "ng test",
     "lint": "ng lint",
-    "install-github": "ngh --cname=ecshop.weicraft.tw",
+    "install-github": "ngh --cname=fakebook.weicraft.tw",
     "bundle-report": "webpack-bundle-analyzer dist/stats.json",
     "watch": "ng build --watch --configuration development"
   },

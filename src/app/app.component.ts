@@ -27,6 +27,7 @@ export class AppComponent implements OnInit {
   private tmpRawSideBarLocRight: number = this.rawSideBarLocRight;
 
   public hammerOption: HammerOptions = {
+    inputClass: Hammer.TouchMouseInput,
     recognizers: [
       // [Hammer.Swipe, { direction: Hammer.DIRECTION_ALL }],
       // [Hammer.Press, { direction: Hammer.DIRECTION_ALL }],
@@ -114,7 +115,7 @@ export class AppComponent implements OnInit {
 
   controlRightSideBar($event: HammerEvent): void {
 
-    let distance = $event.input.deltaX / document.body.clientWidth
+    let distance = $event.input.deltaX / document.body.clientWidth;
 
     if (this.rwdSideBarRight) {
 
